@@ -260,7 +260,8 @@ footer {
     Intro section              
 -----------------------------------------*/
 #intro {
-    background: url('background.jpeg') 50% 0 repeat-y fixed;
+
+    background: url('background.jpg') 50% 0 repeat-y fixed;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
