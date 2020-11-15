@@ -90,7 +90,7 @@ footer {
     padding-bottom: 12px;
 }
 
-#intro .btn,
+  .btn,
 #contact .btn {
     background: transparent;
     border: 2px solid #ffffff;
@@ -261,7 +261,7 @@ footer {
 -----------------------------------------*/
 #intro {
 
-    background: url('background.jpg') 50% 0 repeat-y fixed;
+    background: url('background.jpeg') 50% 0 repeat-y fixed;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
