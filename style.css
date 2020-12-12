@@ -200,6 +200,7 @@ footer {
     font-weight: 600;
     font-size: 3rem;
     line-height: 40px;
+	opacity: 0.8;
 }
 
 .custom-navbar .nav li a {
