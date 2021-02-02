@@ -405,38 +405,53 @@ window.onclick = function(event) {
 <section id="rpo">
 <div class="programs" id="program">
   <h1 style="color: white">Our Programs</h1>
+  	<div class="gallery-filter">
+				<span class="filter-item active" data-filter="all" style="color: white">All</span>
+				<span class="filter-item" data-filter="current" style="color: white">Current</span>
+				<span class="filter-item" data-filter="past" style="color: white">Past</span>
+			</div>
 </div>
+
 <div class="gallery_container-all">
   <div class="gallery_container">
+    	<div class="gallery-item current">
+				<div class="gallery-item-inner">
     <img src="sarah.jpg" alt="Image description goes here">
     <span class="gallery_title">Sarah's Story Workshop</span>
     <span class="gallery_text">Find Your Story and award-winning author Sarah Frank are proud to present Sarah’s Story Workshops, a FREE four-part virtual workshop series taking place every Saturday of September. ✍️ You’ll learn about topics like plot & conflict, character development, dialogue, and the author experience through lessons and interactive activities!</span>
+    </div></div>
   </div>
   <div class="gallery_container">
+    <div class="gallery-item past">
+				<div class="gallery-item-inner">
     <img src="1.png" alt="Image description goes here">
     <span class="gallery_title">Essay 101</span>
     <span class="gallery_text">Find Your Story is excited to present ESSAY 101, a series of FREE virtual formal writing workshops throughout the month of November! ✍️ Middle and high school students will learn about topics such as informed research, structuring a paragraph, literary VS comparative essays, and citation methods; simplified. You'll even get the chance to participate in an ESSAY COMPETITION! 😄</span>
-  </div>
+  </div></div></div>
   <div class="gallery_container">
+    <div class="gallery-item past">
+				<div class="gallery-item-inner">
     <img src="./dearlovetimedeath.png" alt="Image description goes here">
     <span class="gallery_title">Dear Love/Time/Death</span>
     <span class="gallery_text">Dear Love/Time/Death is Find Your Story’s first writing competition of 2021. Inspired by the movie Collateral Beauty, the purpose of this competition is to reflect on the choices we have made (or didn’t make) throughout 2020, the effects of said choices, and the opportunities for growth through the epistolary genre. In this competition, students from Grades 7-12 are to write a letter addressed to the concepts of either “love”, “time”, or “death”. This competition will last from January 22nd to February 28th, 2021, and winners will be able to receive exciting PRIZES!</span>
-  </div>
-  <!--<div class="gallery_container">
-    <img src="https://images.pexels.com/photos/4555540/pexels-photo-4555540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Image description goes here">
-    <span class="gallery_title">Lorem ipsum dolor</span>
-    <span class="gallery_text">Morbi diam viverra mattis sociis magna, habitasse penatibus non lectus</span>
+				</div></div>
   </div>
   <div class="gallery_container">
-    <img src="https://images.pexels.com/photos/4040331/pexels-photo-4040331.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Image description goes here">
-    <span class="gallery_title">Lorem ipsum dolor</span>
-    <span class="gallery_text">Morbi diam viverra mattis sociis magna, habitasse penatibus non lectus</span>
+    <div class="gallery-item current">
+				<div class="gallery-item-inner">
+    <img src="./fys.png" alt="Image description goes here">
+    <span class="gallery_title">Coming Soon!</span>
+    <span class="gallery_text">Coming Soon!</span>
+				</div></div>
   </div>
   <div class="gallery_container">
-    <img src="https://images.pexels.com/photos/5254697/pexels-photo-5254697.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Image description goes here">
-    <span class="gallery_title">Lorem ipsum dolor</span>
-    <span class="gallery_text">Morbi diam viverra mattis sociis magna, habitasse penatibus non lectus</span>
-  </div>-->
+    <div class="gallery-item current">
+				<div class="gallery-item-inner">
+    <img src="./fys.png" alt="Image description goes here">
+    <span class="gallery_title">Coming Soon!</span>
+    <span class="gallery_text">Coming Soon!</span>
+				</div></div>
+  </div>
 </div>
   </section>
   <style>
@@ -468,7 +483,7 @@ window.onclick = function(event) {
 }
 
 .gallery_container {
-  width: calc(33% - 6px);
+  width: calc(20% - 15px);
   overflow: hidden;
   height: fit-content;
   margin: 3px;
@@ -542,9 +557,52 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 }
-  
+ .filter-item{
+	color: #ffffff;
+	font-size: 18px;
+	text-transform: uppercase;
+	display: inline-block;
+	margin:0 10px;
+	cursor: pointer;
+	border-bottom: 2px solid transparent;
+	line-height: 1.2;
+	transition: all 0.3s ease;
+}
+ .filter-item.active{
+	color: #ff9800;
+	border-color : #ff9800;
+}
+.gallery .gallery-item{
+	width: calc(100% / 5);
+	padding: 15px;
+}
 </style>
+<script> 
 
+
+ const filterContainer = document.querySelector(".gallery-filter"),
+ galleryItems = document.querySelectorAll(".gallery-item");
+
+ filterContainer.addEventListener("click", (event) =>{
+   if(event.target.classList.contains("filter-item")){
+   	 // deactivate existing active 'filter-item'
+   	 filterContainer.querySelector(".active").classList.remove("active");
+   	 // activate new 'filter-item'
+   	 event.target.classList.add("active");
+   	 const filterValue = event.target.getAttribute("data-filter");
+   	 galleryItems.forEach((item) =>{
+       if(item.classList.contains(filterValue) || filterValue === 'all'){
+       	item.classList.remove("hide");
+       	 item.classList.add("show");
+       }
+       else{
+       	item.classList.remove("show");
+       	item.classList.add("hide");
+       }
+   	 });
+   }
+ });
+ </script>
 
 <section id="faq" class="parallax-section">
 	<div class="container">
