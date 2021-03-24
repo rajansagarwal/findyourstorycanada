@@ -262,14 +262,11 @@ footer {
 -----------------------------------------*/
 #intro {
 	background: url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701387715.jpg) no-repeat center center fixed;
-background-size:100% 100%!important;
-background-position:0 0!important;
+background-size:100% 100%;
+background-position:0 0;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 background-size:cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center center;
     color: #ffffff;
     display: -webkit-box;
     display: -webkit-flex;
