@@ -281,8 +281,8 @@ footer {
 
 @media (max-width: 500px) {
   #intro {
-    background: none;
-    background-color: rgb(104, 73, 133);
+    // background: none;
+   // background-color: rgb(104, 73, 133);
   }
 
 }
