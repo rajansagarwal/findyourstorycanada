@@ -285,8 +285,7 @@ background-size:cover;
 
 @media (max-width: 500px) {
   #intro {
-    // background: none;
-   // background-color: rgb(104, 73, 133);
+    background-size: none;
   }
 
 }
