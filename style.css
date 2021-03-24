@@ -282,7 +282,7 @@ background-size:cover;
 
 @media (max-width: 500px) {
   #intro {
-    background-size: none;
+    background: url(https://wallpaperaccess.com/full/832966.jpg);
   }
 
 }
