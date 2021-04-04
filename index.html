@@ -33,59 +33,34 @@
   <!-- =========================
      NAVIGATION LINKS     
 ============================== -->
+<center>
+  <div class="m-bar m-red">
+    <a class="m-microphone"><i class="material-icons" style="font-size:26px;">email</i></a>
+    <a class="m-content">Announcement Content</a>
+    <a class="m-close" href="#"><i class="material-icons">close</i></a>
+  </div> 
+</center>
+	<style>
+.m-red {background:#E54556; color:#fff; text-decoration:none;}
+
+.m-bar {width:85%; min-width:600px; max-width:1200px; height:55px; display:inline-block; margin-top:20px; text-align:left;}
+
+.m-bar a.m-close {float:right; display:inline-block; color:#fff; text-decoration:none; overflow:hidden; margin-right:10px;}
+
+.m-bar a.m-close i {margin-top:15px;}
+
+.m-bar a.m-microphone {float:left;  margin-top:15px; margin-left:10px; cursor:default;}
+
+.m-bar a.m-content {font-size:13.5px; font-family:"Noto Sans", sans-serif; margin-left:5px; line-height:54px; display:inline-block;}
+	</style>
 	
-	<div id="text-carousel" class="carousel slide" data-ride="carousel">
-    <!-- Wrapper for slides -->
-    <div class="row">
-        <div class="col-xs-offset-3 col-xs-6">
-            <div class="carousel-inner">
-                <div class="item active">
-                    <div class="carousel-content">
-                        <div>
-                            <p>Sapiente, ducimus, voluptas, mollitia voluptatibus nemo explicabo sit blanditiis laborum dolore illum fuga veniam quae expedita libero accusamus quas harum ex numquam necessitatibus provident deleniti tenetur iusto officiis recusandae corporis culpa quaerat?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="carousel-content">
-                        <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, sint fuga temporibus nam saepe delectus expedita vitae magnam necessitatibus dolores tempore consequatur dicta cumque repellendus eligendi ducimus placeat! </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="carousel-content">
-                        <div>                          
-                            <p>Sapiente, ducimus, voluptas, mollitia voluptatibus nemo explicabo sit blanditiis laborum dolore illum fuga veniam quae expedita libero accusamus quas harum ex numquam necessitatibus provident deleniti tenetur iusto officiis recusandae corporis culpa quaerat?</p>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
- <a class="right carousel-control" href="#text-carousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-
-</div>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
-<style>
-  .carousel-content {
-    color:black;
-    display:flex;
-    align-items:center;
-}
-
-#text-carousel {
-  width: 100%;
-  height: auto;
-  padding: 50px;
-}
-</style>
+	<script>
+		 $(document).ready(function(){
+        $(".m-close").click(function(){
+            $(".m-bar").hide(600);
+        });
+    });
+	</script>
 	
   <div class="navbar navbar-fixed-top custom-navbar" role="navigation">
     <div class="container">
